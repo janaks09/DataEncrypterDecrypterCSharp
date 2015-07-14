@@ -1,0 +1,27 @@
+﻿<Window x:Class="DataEncrypterDecrypter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DataEncrypterDecrypter"
+        mc:Ignorable="d"
+        Title="Crypto-Engine" Height="350" Width="525">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" VerticalAlignment="Center" Margin="10,0,10,100">
+            <TextBlock FontSize="12" Text="Text to Encrypt:"/>
+            <TextBox Name="plaintext" Height="40" FontSize="16"/>
+            <TextBlock FontSize="12" Text="Cipher Text:"/>
+            <TextBox Name="Ciphertext" Height="40" IsEnabled="False" FontSize="16"/>
+            <TextBlock FontSize="12" Text="Decrypted Text:"/>
+            <TextBox Name="decryptedtext" Height="40" IsEnabled="False" FontSize="16"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" VerticalAlignment="Center" Margin="10,0,10,90">
+            <Button Name="encryptbtn" Content="Encrypt" Height="50" Click="encryptbtn_Click"/>
+            <Button Name="decryptbtn" Content="Decrypt" Height="50" Margin="0,10,0,0" Click="decryptbtn_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
